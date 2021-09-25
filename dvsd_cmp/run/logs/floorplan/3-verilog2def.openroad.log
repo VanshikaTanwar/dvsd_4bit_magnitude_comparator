@@ -1,0 +1,16 @@
+OpenROAD 1 f0e6c04818f120fcd15c29735a398d3cd420bd78
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/merged_unpadded.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/merged_unpadded.lef at line 794.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/merged_unpadded.lef
+[INFO IFP-0001] Added 11 rows of 70 sites.
+[INFO] Extracting DIE_AREA and CORE_AREA from the floorplan
+[INFO] Floorplanned on a die area of 0.0 0.0 43.65 54.37 (microns). Saving to /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/reports/floorplan/3-verilog2def.die_area.rpt.
+[INFO] Floorplanned on a core area of 5.52 10.88 37.72 40.8 (microns). Saving to /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/reports/floorplan/3-verilog2def.core_area.rpt.
