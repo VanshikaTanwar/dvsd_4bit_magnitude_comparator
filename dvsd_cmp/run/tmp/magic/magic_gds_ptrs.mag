@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 8730 10874
+string GDS_FILE /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/results/magic/dvsd_cmp.gds
+string GDS_END 163336
+string GDS_START 76556
+<< end >>
