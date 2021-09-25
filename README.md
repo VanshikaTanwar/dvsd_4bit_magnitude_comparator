@@ -243,7 +243,7 @@ Synthesis reports
 ![Screenshot from 2021-09-26 02-29-03](https://user-images.githubusercontent.com/90523478/134785830-35360266-90cd-433d-81ad-e4fd6c29069a.png)
 
 
-##  Magic layout generate ![Uploading Screenshot from 2021-09-26 02-24-28.png…]()
+##  Magic layout generate 
 
 For magic layout generation in magic tool write this in terminal where you ran the above process
 
@@ -296,8 +296,9 @@ gtkwave dvsd_cmp.vcd
 - To explore floorplan
 
 ```
-cd floorplan/
-magic lef read merged.lef def read dvsd_cmp.floorplan.def &
+cd vsdflow/work/tools/openlane_working_dir/openlane/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/results/floorplan/
+
+magic lef read merged_unpadded.lef def read dvsd_cmp.floorplan.def &
 ```
 
 - To explore placement
