@@ -1,0 +1,7 @@
+guide:/openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/routing/15-fastroute.guide
+outputguide:/openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/routing/18-tritonRoute.guide
+outputDRC:/openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/reports/routing/18-tritonRoute.drc
+outputMaze:/openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/routing/18-tritonRoute_maze.log
+verbose:1
+drouteEndIterNum:64
+OR_SEED:42
