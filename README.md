@@ -185,6 +185,32 @@ bash-4:$
 which shall display the "successful" message after running all the respective tasks. 
 ![T-20_successful](https://user-images.githubusercontent.com/72103059/130254369-d9112e33-d50c-4028-9c2a-1e8dba499c0d.png)
 
+## Synthesis
+
+Synthesis reports
+
+```
+
+- Printing statistics.
+
+=== dvsd_cmp ===
+
+   Number of wires:                 22
+   Number of wire bits:             28
+   Number of public wires:           5
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 20
+     $_ANDNOT_                       9
+     $_NOR_                          1
+     $_ORNOT_                        3
+     $_OR_                           3
+     $_XNOR_                         1
+     $_XOR_                          3
+
+```
 
 ##  Magic layout generate 
 For magic layout generation in magic tool write this in terminal where you ran the above process
