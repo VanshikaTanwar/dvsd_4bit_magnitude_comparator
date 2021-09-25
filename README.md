@@ -237,8 +237,10 @@ Synthesis reports
    Chip area for module '\dvsd_cmp': 106.352000
 ```
 - Yosys synthesis strategies
-- 
+
 ![Screenshot from 2021-09-26 02-24-28](https://user-images.githubusercontent.com/90523478/134785768-262195d1-ce75-44a3-8977-971bef79bb13.png)
+
+![Screenshot from 2021-09-26 02-29-03](https://user-images.githubusercontent.com/90523478/134785830-35360266-90cd-433d-81ad-e4fd6c29069a.png)
 
 
 ##  Magic layout generate ![Uploading Screenshot from 2021-09-26 02-24-28.png…]()
