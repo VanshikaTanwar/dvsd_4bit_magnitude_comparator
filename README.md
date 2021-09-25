@@ -211,6 +211,31 @@ Synthesis reports
      $_XOR_                          3
 
 ```
+```
+
+- Printing statistics.
+
+=== dvsd_cmp ===
+
+   Number of wires:                 17
+   Number of wire bits:             23
+   Number of public wires:           5
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 15
+     sky130_fd_sc_hd__a22oi_2        1
+     sky130_fd_sc_hd__inv_2          6
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nor2_2         2
+     sky130_fd_sc_hd__o211a_2        1
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o221a_2        2
+     sky130_fd_sc_hd__o22a_2         1
+
+   Chip area for module '\dvsd_cmp': 106.352000
+```
 
 ##  Magic layout generate 
 For magic layout generation in magic tool write this in terminal where you ran the above process
