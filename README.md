@@ -147,6 +147,16 @@ you can install docker file following this link
 
 https://docs.docker.com/engine/install/
 
+## Pre-layout Simulation
+
+This is how you can simulate your design.
+
+![pre_simulation_analysis](https://user-images.githubusercontent.com/72103059/130665947-3c5a53a2-b16a-4967-830f-0d05666ee605.png)
+
+Pre-layout simulation waveform
+![pre_gtkwave(3)](https://user-images.githubusercontent.com/72103059/130666317-a68d77f7-903c-40bf-a39d-03cc8cb1c178.png)
+
+
 ##  Running openlane
 
 Once you are sure the docker is present, you have to make mount of the current files in **openlane**
@@ -175,14 +185,6 @@ bash-4:$
 which shall display the "successful" message after running all the respective tasks. 
 ![T-20_successful](https://user-images.githubusercontent.com/72103059/130254369-d9112e33-d50c-4028-9c2a-1e8dba499c0d.png)
 
-## Pre-layout Simulation
-
-This is how you can simulate your design.
-
-![pre_simulation_analysis](https://user-images.githubusercontent.com/72103059/130665947-3c5a53a2-b16a-4967-830f-0d05666ee605.png)
-
-Pre-layout simulation waveform
-![pre_gtkwave(3)](https://user-images.githubusercontent.com/72103059/130666317-a68d77f7-903c-40bf-a39d-03cc8cb1c178.png)
 
 ##  Magic layout generate 
 For magic layout generation in magic tool write this in terminal where you ran the above process
