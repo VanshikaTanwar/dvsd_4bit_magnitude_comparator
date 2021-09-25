@@ -1,0 +1,7 @@
+
+29. Executing CHECK pass (checking for obvious problems).
+Checking module dvsd_cmp...
+Warning: Wire dvsd_cmp.\less_than is used but has no driver.
+Warning: Wire dvsd_cmp.\greater_than is used but has no driver.
+Warning: Wire dvsd_cmp.\equal_to is used but has no driver.
+Found and reported 3 problems.

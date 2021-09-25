@@ -1,0 +1,884 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+4052 (git sha1 d061b0e, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /openLANE_flow/designs/dvsd_cmp/src/tb_dvsd_cmp.v
+Parsing SystemVerilog input from `/openLANE_flow/designs/dvsd_cmp/src/tb_dvsd_cmp.v' to AST representation.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v
+Parsing SystemVerilog input from `/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v' to AST representation.
+Generating RTLIL representation for module `\dvsd_cmp'.
+Note: Assuming pure combinatorial block at /openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:30.5-53.4 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/synthesis/hierarchy.dot'.
+Dumping module dvsd_cmp to page 1.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \dvsd_cmp
+
+4.2. Analyzing design hierarchy..
+Top module:  \dvsd_cmp
+Removed 0 unused modules.
+
+5. Executing TRIBUF pass.
+
+6. Executing SYNTH pass.
+
+6.1. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1.1. Analyzing design hierarchy..
+Top module:  \dvsd_cmp
+
+6.1.2. Analyzing design hierarchy..
+Top module:  \dvsd_cmp
+Removed 0 unused modules.
+
+6.2. Executing PROC pass (convert processes to netlists).
+
+6.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:30$1 in module dvsd_cmp.
+Removed a total of 0 dead cases.
+
+6.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+6.2.4. Executing PROC_INIT pass (extract init attributes).
+
+6.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+6.2.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\dvsd_cmp.$proc$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:30$1'.
+     1/6: $2\greater_than[0:0]
+     2/6: $2\equal_to[0:0]
+     3/6: $2\less_than[0:0]
+     4/6: $1\greater_than[0:0]
+     5/6: $1\equal_to[0:0]
+     6/6: $1\less_than[0:0]
+
+6.2.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\dvsd_cmp.\less_than' from process `\dvsd_cmp.$proc$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:30$1'.
+No latch inferred for signal `\dvsd_cmp.\equal_to' from process `\dvsd_cmp.$proc$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:30$1'.
+No latch inferred for signal `\dvsd_cmp.\greater_than' from process `\dvsd_cmp.$proc$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:30$1'.
+
+6.2.8. Executing PROC_DFF pass (convert process syncs to FFs).
+
+6.2.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.2.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\dvsd_cmp.$proc$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:30$1'.
+Removing empty process `dvsd_cmp.$proc$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:30$1'.
+Cleaned up 2 empty switches.
+
+6.3. Executing FLATTEN pass (flatten design).
+
+6.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+Removed 0 unused cells and 20 unused wires.
+<suppressed ~1 debug messages>
+
+6.6. Executing CHECK pass (checking for obvious problems).
+Checking module dvsd_cmp...
+Found and reported 0 problems.
+
+6.7. Executing OPT pass (performing simple optimizations).
+
+6.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dvsd_cmp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$13.
+    dead port 1/2 on $mux $procmux$19.
+    dead port 1/2 on $mux $procmux$7.
+Removed 3 multiplexer ports.
+<suppressed ~3 debug messages>
+
+6.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dvsd_cmp.
+Performed a total of 0 changes.
+
+6.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+6.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dvsd_cmp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+6.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dvsd_cmp.
+Performed a total of 0 changes.
+
+6.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+6.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.7.16. Finished OPT passes. (There is nothing left to do.)
+
+6.8. Executing FSM pass (extract and optimize FSM).
+
+6.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+6.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+6.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+6.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+6.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+6.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+6.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+6.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+6.9. Executing OPT pass (performing simple optimizations).
+
+6.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dvsd_cmp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+6.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dvsd_cmp.
+Performed a total of 0 changes.
+
+6.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+6.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.9.9. Finished OPT passes. (There is nothing left to do.)
+
+6.10. Executing WREDUCE pass (reducing word size of cells).
+
+6.11. Executing PEEPOPT pass (run peephole optimizers).
+
+6.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+6.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module dvsd_cmp:
+  creating $alu model for $gt$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:33$2 ($gt): new $alu
+  creating $alu model for $eq$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:40$3 ($eq): merged with $gt$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:33$2.
+  creating $alu cell for $gt$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:33$2, $eq$/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:40$3: $auto$alumacc.cc:485:replace_alu$31
+  created 1 $alu and 0 $macc cells.
+
+6.14. Executing SHARE pass (SAT-based resource sharing).
+
+6.15. Executing OPT pass (performing simple optimizations).
+
+6.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+<suppressed ~3 debug messages>
+
+6.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dvsd_cmp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+6.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dvsd_cmp.
+Performed a total of 0 changes.
+
+6.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+Removed 1 unused cells and 3 unused wires.
+<suppressed ~2 debug messages>
+
+6.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dvsd_cmp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+6.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dvsd_cmp.
+Performed a total of 0 changes.
+
+6.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+6.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.15.16. Finished OPT passes. (There is nothing left to do.)
+
+6.16. Executing MEMORY pass.
+
+6.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+6.16.2. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+6.16.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+6.16.4. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+6.16.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+6.16.6. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+6.18. Executing OPT pass (performing simple optimizations).
+
+6.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+<suppressed ~5 debug messages>
+
+6.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+6.18.5. Finished fast OPT passes.
+
+6.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+6.20. Executing OPT pass (performing simple optimizations).
+
+6.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dvsd_cmp..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dvsd_cmp.
+Performed a total of 0 changes.
+
+6.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.20.6. Executing OPT_SHARE pass.
+
+6.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+6.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.20.10. Finished OPT passes. (There is nothing left to do.)
+
+6.21. Executing TECHMAP pass (map to technology primitives).
+
+6.21.1. Executing Verilog-2005 frontend: /build/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/build/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+6.21.2. Continuing TECHMAP pass.
+Using template $paramod$740b056ede97228d3eae64ea2fdc81f0a33e0fe7\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~212 debug messages>
+
+6.22. Executing OPT pass (performing simple optimizations).
+
+6.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+<suppressed ~7 debug messages>
+
+6.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+6.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+Removed 6 unused cells and 29 unused wires.
+<suppressed ~7 debug messages>
+
+6.22.5. Finished fast OPT passes.
+
+6.23. Executing ABC pass (technology mapping using ABC).
+
+6.23.1. Extracting gate netlist of module `\dvsd_cmp' to `<abc-temp-dir>/input.blif'..
+Extracted 28 gates and 36 wires to a netlist network with 8 inputs and 3 outputs.
+
+6.23.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.23.1.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:        9
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:             ORNOT cells:        3
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        3
+ABC RESULTS:        internal signals:       25
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:        3
+Removing temp directory.
+
+6.24. Executing OPT pass (performing simple optimizations).
+
+6.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+6.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+6.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~1 debug messages>
+
+6.24.5. Finished fast OPT passes.
+
+6.25. Executing HIERARCHY pass (managing design hierarchy).
+
+6.25.1. Analyzing design hierarchy..
+Top module:  \dvsd_cmp
+
+6.25.2. Analyzing design hierarchy..
+Top module:  \dvsd_cmp
+Removed 0 unused modules.
+
+6.26. Printing statistics.
+
+=== dvsd_cmp ===
+
+   Number of wires:                 22
+   Number of wire bits:             28
+   Number of public wires:           5
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 20
+     $_ANDNOT_                       9
+     $_NOR_                          1
+     $_ORNOT_                        3
+     $_OR_                           3
+     $_XNOR_                         1
+     $_XOR_                          3
+
+6.27. Executing CHECK pass (checking for obvious problems).
+Checking module dvsd_cmp...
+Found and reported 0 problems.
+
+7. Generating Graphviz representation of design.
+Writing dot description to `/openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/synthesis/post_techmap.dot'.
+Dumping module dvsd_cmp to page 1.
+
+8. Executing SHARE pass (SAT-based resource sharing).
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dvsd_cmp..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dvsd_cmp.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dvsd_cmp'.
+Removed a total of 0 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dvsd_cmp.
+
+9.9. Finished OPT passes. (There is nothing left to do.)
+
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+
+11. Printing statistics.
+
+=== dvsd_cmp ===
+
+   Number of wires:                 22
+   Number of wire bits:             28
+   Number of public wires:           5
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 20
+     $_ANDNOT_                       9
+     $_NOR_                          1
+     $_ORNOT_                        3
+     $_OR_                           3
+     $_XNOR_                         1
+     $_XOR_                          3
+
+mapping tbuf
+
+12. Executing TECHMAP pass (map to technology primitives).
+
+12.1. Executing Verilog-2005 frontend: /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+12.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+13. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+14. Executing MUXCOVER pass (mapping to wider MUXes).
+Covering MUX trees in module dvsd_cmp..
+  Treeifying 0 MUXes:
+    Finished treeification: Found 0 trees.
+  Covering trees:
+  Added a total of 0 decoder MUXes.
+<suppressed ~1 debug messages>
+
+15. Executing TECHMAP pass (map to technology primitives).
+
+15.1. Executing Verilog-2005 frontend: /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/mux4_map.v
+Parsing Verilog input from `/home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/mux4_map.v' to AST representation.
+Generating RTLIL representation for module `\$_MUX4_'.
+Successfully finished Verilog frontend.
+
+15.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+16. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+17. Executing TECHMAP pass (map to technology primitives).
+
+17.1. Executing Verilog-2005 frontend: /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/mux2_map.v
+Parsing Verilog input from `/home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/mux2_map.v' to AST representation.
+Generating RTLIL representation for module `\$_MUX_'.
+Successfully finished Verilog frontend.
+
+17.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+18. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+19. Executing TECHMAP pass (map to technology primitives).
+
+19.1. Executing Verilog-2005 frontend: /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+19.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+20. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+21. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+21.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\dvsd_cmp':
+
+22. Printing statistics.
+
+=== dvsd_cmp ===
+
+   Number of wires:                 22
+   Number of wire bits:             28
+   Number of public wires:           5
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 20
+     $_ANDNOT_                       9
+     $_NOR_                          1
+     $_ORNOT_                        3
+     $_OR_                           3
+     $_XNOR_                         1
+     $_XOR_                          3
+
+[INFO]: ABC: WireLoad : S_4
+
+23. Executing ABC pass (technology mapping using ABC).
+
+23.1. Extracting gate netlist of module `\dvsd_cmp' to `/tmp/yosys-abc-x1ESgO/input.blif'..
+Extracted 20 gates and 28 wires to a netlist network with 8 inputs and 3 outputs.
+
+23.1.1. Executing ABC.
+Running ABC command: /build/bin/yosys-abc -s -f /tmp/yosys-abc-x1ESgO/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-x1ESgO/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-x1ESgO/input.blif 
+ABC: + read_lib -w /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/trimmed.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.10 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/trimmed.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.14 sec
+ABC: Memory =    7.77 MB. Time =     0.14 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/synthesis/yosys.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_8".
+ABC: Setting output load to be 17.650000.
+ABC: + read_constr /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/tmp/synthesis/yosys.sdc 
+ABC: + fx 
+ABC: + mfs 
+ABC: + strash 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + retime -D -D 10000.0 -M 5 
+ABC: + scleanup 
+ABC: Error: The network is combinational.
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + fraig_restore 
+ABC: + amap -m -Q 0.1 -F 20 -A 20 -C 5000 
+ABC: + retime -D -D 10000.0 
+ABC: + buffer -N 5 -S 1000.0 
+ABC: + upsize -D 10000.0 
+ABC: Current delay (1204.79 ps) does not exceed the target delay (10000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 10000.0 
+ABC: + stime -p 
+ABC: WireLoad = "none"  Gates =     15 ( 40.0 %)   Cap =  7.5 ff (  5.0 %)   Area =      106.35 ( 60.0 %)   Delay =   933.68 ps  ( 66.7 %)               
+ABC: Path  0 --       2 : 0    1 pi                       A =   0.00  Df =   6.1   -4.2 ps  S =  17.8 ps  Cin =  0.0 ff  Cout =   4.6 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      17 : 1    3 sky130_fd_sc_hd__inv_2   A =   3.75  Df =  55.6  -17.8 ps  S =  61.0 ps  Cin =  4.5 ff  Cout =  11.9 ff  Cmax = 331.4 ff  G =  250  
+ABC: Path  2 --      20 : 5    2 sky130_fd_sc_hd__o221a_2 A =  11.26  Df = 424.9 -117.7 ps  S =  64.5 ps  Cin =  2.3 ff  Cout =   7.1 ff  Cmax = 281.1 ff  G =  290  
+ABC: Path  3 --      21 : 1    1 sky130_fd_sc_hd__inv_2   A =   3.75  Df = 452.3 -102.2 ps  S =  24.2 ps  Cin =  4.5 ff  Cout =   2.5 ff  Cmax = 331.4 ff  G =   52  
+ABC: Path  4 --      23 : 4    2 sky130_fd_sc_hd__o22a_2  A =  10.01  Df = 715.2   -2.9 ps  S = 123.9 ps  Cin =  2.4 ff  Cout =  22.3 ff  Cmax = 304.9 ff  G =  934  
+ABC: Path  5 --      26 : 2    1 sky130_fd_sc_hd__nor2_2  A =   6.26  Df = 933.7 -130.8 ps  S = 213.8 ps  Cin =  4.4 ff  Cout =  17.6 ff  Cmax = 141.9 ff  G =  399  
+ABC: Start-point = pi1 (\B_in [3]).  End-point = po0 (\greater_than).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =    8/    3  lat =    0  nd =    15  edge =     37  area =106.34  delay = 6.00  lev = 6
+ABC: + write_blif /tmp/yosys-abc-x1ESgO/output.blif 
+
+23.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o221a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:        1
+ABC RESULTS:        internal signals:       17
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:        3
+Removing temp directory.
+
+24. Executing SETUNDEF pass (replace undef values with defined constants).
+
+25. Executing HILOMAP pass (mapping to constant drivers).
+
+26. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dvsd_cmp..
+Removed 0 unused cells and 28 unused wires.
+<suppressed ~1 debug messages>
+
+28. Executing INSBUF pass (insert buffer cells for connected wires).
+
+29. Executing CHECK pass (checking for obvious problems).
+Checking module dvsd_cmp...
+Warning: Wire dvsd_cmp.\less_than is used but has no driver.
+Warning: Wire dvsd_cmp.\greater_than is used but has no driver.
+Warning: Wire dvsd_cmp.\equal_to is used but has no driver.
+Found and reported 3 problems.
+
+30. Printing statistics.
+
+=== dvsd_cmp ===
+
+   Number of wires:                 17
+   Number of wire bits:             23
+   Number of public wires:           5
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 15
+     sky130_fd_sc_hd__a22oi_2        1
+     sky130_fd_sc_hd__inv_2          6
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nor2_2         2
+     sky130_fd_sc_hd__o211a_2        1
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o221a_2        2
+     sky130_fd_sc_hd__o22a_2         1
+
+   Chip area for module '\dvsd_cmp': 106.352000
+
+31. Executing Verilog backend.
+Dumping module `\dvsd_cmp'.
+
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: 7ca512c2b1, CPU: user 1.03s system 0.06s, MEM: 43.86 MB peak
+Yosys 0.9+4052 (git sha1 d061b0e, gcc 8.3.1 -fPIC -Os)
+Time spent: 36% 4x stat (0 sec), 28% 2x abc (0 sec), ...

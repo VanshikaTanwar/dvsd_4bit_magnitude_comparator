@@ -1,0 +1,22 @@
+digraph "dvsd_cmp" {
+label="dvsd_cmp";
+rankdir="LR";
+remincross=true;
+n12 [ shape=octagon, label="greater_than", color="black", fontcolor="black" ];
+n13 [ shape=octagon, label="equal_to", color="black", fontcolor="black" ];
+n14 [ shape=octagon, label="less_than", color="black", fontcolor="black" ];
+n15 [ shape=octagon, label="B_in", color="black", fontcolor="black" ];
+n16 [ shape=octagon, label="A_in", color="black", fontcolor="black" ];
+c20 [ shape=record, label="{{<p17> A|<p18> B}|$3\n$eq|{<p19> Y}}" ];
+c21 [ shape=record, label="{{<p17> A|<p18> B}|$2\n$gt|{<p19> Y}}" ];
+p0 [shape=box, style=rounded, label="PROC $1\n/openLANE_flow/designs/dvsd_cmp/src/dvsd_cmp.v:30.5-53.4"];
+p0:e -> n12:w [color="black", label=""];
+p0:e -> n13:w [color="black", label=""];
+p0:e -> n14:w [color="black", label=""];
+n15:e -> c20:p18:w [color="black", style="setlinewidth(3)", label=""];
+n15:e -> c21:p18:w [color="black", style="setlinewidth(3)", label=""];
+n16:e -> c20:p17:w [color="black", style="setlinewidth(3)", label=""];
+n16:e -> c21:p17:w [color="black", style="setlinewidth(3)", label=""];
+c20:p19:e -> p0:w [color="black", label=""];
+c21:p19:e -> p0:w [color="black", label=""];
+}
