@@ -236,8 +236,12 @@ Synthesis reports
 
    Chip area for module '\dvsd_cmp': 106.352000
 ```
+Yosys synthesis strategies
+![Screenshot from 2021-09-26 02-24-28](https://user-images.githubusercontent.com/90523478/134785768-262195d1-ce75-44a3-8977-971bef79bb13.png)
 
-##  Magic layout generate 
+
+##  Magic layout generate ![Uploading Screenshot from 2021-09-26 02-24-28.png…]()
+
 For magic layout generation in magic tool write this in terminal where you ran the above process
 
 ```sh
