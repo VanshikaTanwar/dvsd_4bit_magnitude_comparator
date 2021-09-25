@@ -1,0 +1,83 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1629461662
+<< obsli1 >>
+rect 1104 2159 7544 8177
+<< obsm1 >>
+rect 14 2128 7544 8208
+<< metal2 >>
+rect 1306 10074 1362 10874
+rect 4250 10074 4306 10874
+rect 7194 10074 7250 10874
+rect 18 0 74 800
+rect 2962 0 3018 800
+rect 5906 0 5962 800
+<< obsm2 >>
+rect 20 10018 1250 10146
+rect 1418 10018 4194 10146
+rect 4362 10018 7138 10146
+rect 20 856 7248 10018
+rect 130 31 2906 856
+rect 3074 31 5850 856
+rect 6018 31 7248 856
+<< metal3 >>
+rect 7930 8712 8730 8832
+rect 0 8440 800 8560
+rect 7930 4360 8730 4480
+rect 0 4088 800 4208
+rect 7930 8 8730 128
+<< obsm3 >>
+rect 800 8640 7850 8805
+rect 880 8632 7850 8640
+rect 880 8360 7930 8632
+rect 800 4560 7930 8360
+rect 800 4288 7850 4560
+rect 880 4280 7850 4288
+rect 880 4008 7930 4280
+rect 800 208 7930 4008
+rect 800 35 7850 208
+<< obsm4 >>
+rect 2017 2128 6630 8208
+<< metal5 >>
+rect 1104 3962 7544 4282
+rect 1104 2966 7544 3286
+<< obsm5 >>
+rect 1104 4602 7544 7274
+rect 1104 3606 7544 3642
+<< labels >>
+rlabel metal3 s 0 8440 800 8560 6 A_in[0]
+port 1 nsew signal input
+rlabel metal3 s 7930 8 8730 128 6 A_in[1]
+port 2 nsew signal input
+rlabel metal2 s 18 0 74 800 6 A_in[2]
+port 3 nsew signal input
+rlabel metal2 s 7194 10074 7250 10874 6 A_in[3]
+port 4 nsew signal input
+rlabel metal2 s 5906 0 5962 800 6 B_in[0]
+port 5 nsew signal input
+rlabel metal3 s 0 4088 800 4208 6 B_in[1]
+port 6 nsew signal input
+rlabel metal3 s 7930 8712 8730 8832 6 B_in[2]
+port 7 nsew signal input
+rlabel metal2 s 2962 0 3018 800 6 B_in[3]
+port 8 nsew signal input
+rlabel metal5 s 1104 3962 7544 4282 6 VGND
+port 9 nsew ground input
+rlabel metal5 s 1104 2966 7544 3286 6 VPWR
+port 10 nsew power input
+rlabel metal2 s 1306 10074 1362 10874 6 equal_to
+port 11 nsew signal output
+rlabel metal2 s 4250 10074 4306 10874 6 greater_than
+port 12 nsew signal output
+rlabel metal3 s 7930 4360 8730 4480 6 less_than
+port 13 nsew signal output
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX 0 0 8730 10874
+string LEFview TRUE
+string GDS_FILE /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/results/magic/dvsd_cmp.gds
+string GDS_END 163336
+string GDS_START 76556
+<< end >>
+
