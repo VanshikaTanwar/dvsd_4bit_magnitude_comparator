@@ -208,6 +208,32 @@ command for post-layout simulation
 Post-layout simulation waveform
 ![Screenshot from 2021-08-28 18-17-25](https://user-images.githubusercontent.com/72103059/131218402-ee6e955d-0455-4064-97d9-fe1d9ad63f00.png)
 
+Synthesis reports
+
+```
+
+- Printing statistics.
+
+=== dvsd_cmp ===
+
+   Number of wires:                 22
+   Number of wire bits:             28
+   Number of public wires:           5
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 20
+     $_ANDNOT_                       9
+     $_NOR_                          1
+     $_ORNOT_                        3
+     $_OR_                           3
+     $_XNOR_                         1
+     $_XOR_                          3
+
+```
+
+
 ## Steps to reproduce and explore the design
 
 - Clone the project using following command
