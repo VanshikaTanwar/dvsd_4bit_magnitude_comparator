@@ -1,0 +1,145 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO dvsd_cmp
+  CLASS BLOCK ;
+  FOREIGN dvsd_cmp ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 43.650 BY 54.370 ;
+  PIN A_in[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 42.200 4.000 42.800 ;
+    END
+  END A_in[0]
+  PIN A_in[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 39.650 0.040 43.650 0.640 ;
+    END
+  END A_in[1]
+  PIN A_in[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END A_in[2]
+  PIN A_in[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 35.970 50.370 36.250 54.370 ;
+    END
+  END A_in[3]
+  PIN B_in[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 29.530 0.000 29.810 4.000 ;
+    END
+  END B_in[0]
+  PIN B_in[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 20.440 4.000 21.040 ;
+    END
+  END B_in[1]
+  PIN B_in[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 39.650 43.560 43.650 44.160 ;
+    END
+  END B_in[2]
+  PIN B_in[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 14.810 0.000 15.090 4.000 ;
+    END
+  END B_in[3]
+  PIN VGND
+    DIRECTION INPUT ;
+    USE GROUND ;
+    PORT
+      LAYER met5 ;
+        RECT 5.520 19.810 37.720 21.410 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INPUT ;
+    USE POWER ;
+    PORT
+      LAYER met5 ;
+        RECT 5.520 14.830 37.720 16.430 ;
+    END
+  END VPWR
+  PIN equal_to
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 6.530 50.370 6.810 54.370 ;
+    END
+  END equal_to
+  PIN greater_than
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 21.250 50.370 21.530 54.370 ;
+    END
+  END greater_than
+  PIN less_than
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 39.650 21.800 43.650 22.400 ;
+    END
+  END less_than
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 37.720 40.885 ;
+      LAYER met1 ;
+        RECT 0.070 10.640 37.720 41.040 ;
+      LAYER met2 ;
+        RECT 0.100 50.090 6.250 50.730 ;
+        RECT 7.090 50.090 20.970 50.730 ;
+        RECT 21.810 50.090 35.690 50.730 ;
+        RECT 0.100 4.280 36.240 50.090 ;
+        RECT 0.650 0.155 14.530 4.280 ;
+        RECT 15.370 0.155 29.250 4.280 ;
+        RECT 30.090 0.155 36.240 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 43.200 39.250 44.025 ;
+        RECT 4.400 43.160 39.250 43.200 ;
+        RECT 4.400 41.800 39.650 43.160 ;
+        RECT 4.000 22.800 39.650 41.800 ;
+        RECT 4.000 21.440 39.250 22.800 ;
+        RECT 4.400 21.400 39.250 21.440 ;
+        RECT 4.400 20.040 39.650 21.400 ;
+        RECT 4.000 1.040 39.650 20.040 ;
+        RECT 4.000 0.175 39.250 1.040 ;
+      LAYER met4 ;
+        RECT 10.085 10.640 33.150 41.040 ;
+      LAYER met5 ;
+        RECT 5.520 23.010 37.720 36.370 ;
+        RECT 5.520 18.030 37.720 18.210 ;
+  END
+END dvsd_cmp
+END LIBRARY
+
