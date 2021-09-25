@@ -212,43 +212,43 @@ Post-layout simulation waveform
 
 - Clone the project using following command
  
-`git clone https://github.com/Khalique13/dvsd-8-bit-priority-encoder.git`
+`git clone https://github.com/VanshikaTanwar/dvsd_4bit_magnitude_comparator.git`
 
 - To explore synthesis of the design
 
 ```
 make mount
-flow.tcl -design dvsd_pe -synth_explore
+flow.tcl -design dvsd_cmp -synth_explore
 ```
 
 - To reproduce Pre-layout simulation
 
 ```
 cd pre_layout/
-iverilog -o dvsd_pe dvsd_pe.v test_dvsd_pe.v
-./dvsd_pe
-gtkwave dvsd_pe.vcd
+iverilog -o dvsd_cmp dvsd_cmp.v test_dvsd_cmp.v
+./dvsd_cmp
+gtkwave dvsd_cmp.vcd
 ```
 
 - To explore floorplan
 
 ```
 cd floorplan/
-magic lef read merged.lef def read dvsd_pe.floorplan.def &
+magic lef read merged.lef def read dvsd_cmp.floorplan.def &
 ```
 
 - To explore placement
 
 ```
 cd placement/ 
-magic lef read merged.lef def read dvsd_pe.placement.def &
+magic lef read merged.lef def read dvsd_cmp.placement.def &
 ```
 
 - To explore final layout
 
 ```
 cd final_layout/
-magic dvsd_pe.mag
+magic dvsd_cmp.mag
 ```
 
 - To reproduce Post-layout simulation
@@ -263,7 +263,7 @@ gtkwave gls.vcd
 - Complete details, logs and results can be found under this [folder](https://github.com/Khalique13/dvsd-8-bit-priority-encoder/tree/main/dvsd_pe). 
 
 ```
-dvsd_pe
+dvsd_cmp
 ├── config.tcl
 ├── runs
 │   ├── run
