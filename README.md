@@ -378,6 +378,39 @@ Number of nets violated: 0
 
 ```
 
+### Layout vs Schematic
+
+- Subcircuit summary
+
+```
+Circuit 1: dvsd_cmp                         |Circuit 2: dvsd_cmp                         
+-------------------------------------------|-------------------------------------------
+sky130_fd_sc_hd__decap_12                  |sky130_fd_sc_hd__decap_12               
+sky130_fd_sc_hd__decap_3                   |sky130_fd_sc_hd__decap_3               
+sky130_fd_sc_hd__buf_1                     |sky130_fd_sc_hd__buf_1               
+sky130_fd_sc_hd__decap_4                   |sky130_fd_sc_hd__decap_4              
+sky130_fd_sc_hd__clkbuf_1                  |sky130_fd_sc_hd__clkbuf_1             
+sky130_fd_sc_hd__tapvpwrvgnd_1             |sky130_fd_sc_hd__tapvpwrvgnd_1                
+sky130_fd_sc_hd__decap_8                   |sky130_fd_sc_hd__decap_8               
+ky130_fd_sc_hd__fill_1                     |sky130_fd_sc_hd__fill_1               
+sky130_fd_sc_hd__fill_2                    |sky130_fd_sc_hd__fill_2                 
+sky130_fd_sc_hd__inv_2                     |sky130_fd_sc_hd__inv_2                 
+sky130_fd_sc_hd__nand2_1                   |sky130_fd_sc_hd__nand2_1               
+sky130_fd_sc_hd__decap_6                   |sky130_fd_sc_hd__decap_6             
+sky130_fd_sc_hd__o221a_1                   |sky130_fd_sc_hd__o221a_1               
+sky130_fd_sc_hd__o21ba_1                   |sky130_fd_sc_hd__o21ba_1                 
+sky130_fd_sc_hd__a22oi_1                   |sky130_fd_sc_hd__a22oi_1              
+sky130_fd_sc_hd__o22a_1                    |sky130_fd_sc_hd__o22a_1                 
+sky130_fd_sc_hd__clkbuf_2                  |sky130_fd_sc_hd__clkbuf_2              
+sky130_fd_sc_hd__nor2_1                    |sky130_fd_sc_hd__nor2_1              
+sky130_fd_sc_hd__o211a_1                   |sky130_fd_sc_hd__o211a_1
+                      
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+```
+
+
 ##  Magic layout generate 
 
 For magic layout generation in magic tool write this in terminal where you ran the above process
