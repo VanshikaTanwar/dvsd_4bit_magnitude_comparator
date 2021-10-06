@@ -248,9 +248,7 @@ Synthesis reports
 
 ### Floorplanning 
 
-![floorplan_vanshika](https://user-images.githubusercontent.com/90523478/136266782-ad2595bb-3593-4131-8187-916722a86ce7.png)
-
-
+![Screenshot from 2021-10-07 00-48-18](https://user-images.githubusercontent.com/90523478/136268915-9485205c-a523-43ba-bf82-1b7291a1cb89.png)
 
 
 ##  Magic layout generate 
