@@ -300,6 +300,34 @@ Total             2448            36            1.47%             0 /  0 /  0
 
 ```
 
+### Routing
+
+- Routing resources analysis:
+```
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical          630           106          83.17%
+met1       Horizontal        840           682          18.81%
+met2       Vertical          630           558          11.43%
+met3       Horizontal        420           385          8.33%
+met4       Vertical          252           214          15.08%
+met5       Horizontal         84            70          16.67%
+---------------------------------------------------------------
+```
+- Final congestion report:
+```
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                106             1            0.94%             0 /  0 /  0
+met1               682            27            3.96%             0 /  0 /  0
+met2               558            36            6.45%             0 /  0 /  0
+met3               385             0            0.00%             0 /  0 /  0
+met4               214             0            0.00%             0 /  0 /  0
+met5                70             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             2015            64            3.18%             0 /  0 /  0
+```
 
 ##  Magic layout generate 
 
