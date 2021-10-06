@@ -248,6 +248,12 @@ Synthesis reports
 
 ### Floorplanning 
 
+```
+cd vsdflow/work/tools/openlane_working_dir/openlane/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/results/floorplan/
+
+magic lef read merged_unpadded.lef def read dvsd_cmp.floorplan.def &
+```
+
 ![Screenshot from 2021-10-07 00-48-18](https://user-images.githubusercontent.com/90523478/136268915-9485205c-a523-43ba-bf82-1b7291a1cb89.png)
 
 
