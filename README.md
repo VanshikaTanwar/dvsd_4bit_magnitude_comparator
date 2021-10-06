@@ -1,5 +1,5 @@
 
-![license](https://img.shields.io/github/license/Khalique13/dvsd_pe_sky130?color=red)
+![license](https://img.shields.io/github/license/VanshikaTanwar/dvsd_4bit_magnitude_comparator?color=red)
 
 
 # 4bit_magnitude_comparator(dvsd_cmp) RTL2GDS flow
