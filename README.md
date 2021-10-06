@@ -256,6 +256,39 @@ magic lef read merged_unpadded.lef def read dvsd_cmp.floorplan.def &
 
 ![Screenshot from 2021-10-07 00-48-18](https://user-images.githubusercontent.com/90523478/136268915-9485205c-a523-43ba-bf82-1b7291a1cb89.png)
 
+### Placement
+
+- Routing resources analysis:
+```
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical          630           535          15.08%
+met1       Horizontal        840           686          18.33%
+met2       Vertical          630           558          11.43%
+met3       Horizontal        420           385          8.33%
+met4       Vertical          252           214          15.08%
+met5       Horizontal         84            70          16.67%
+---------------------------------------------------------------
+
+ Final number of vias: 26
+ Final usage 3D: 114
+```
+- Final congestion report:
+```
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                535            18            3.36%             0 /  0 /  0
+met1               686            18            2.62%             0 /  0 /  0
+met2               558             0            0.00%             0 /  0 /  0
+met3               385             0            0.00%             0 /  0 /  0
+met4               214             0            0.00%             0 /  0 /  0
+met5                70             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             2448            36            1.47%             0 /  0 /  0
+
+```
+
 
 ##  Magic layout generate 
 
