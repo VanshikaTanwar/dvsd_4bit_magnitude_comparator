@@ -258,6 +258,17 @@ magic lef read merged_unpadded.lef def read dvsd_cmp.floorplan.def &
 
 ### Placement
 
+- Placement Analysis
+```
+---------------------------------
+total displacement         89.0 u
+average displacement        1.5 u
+max displacement           10.0 u
+original HPWL             427.5 u
+legalized HPWL            485.6 u
+delta HPWL                   14 %
+```
+
 - Routing resources analysis:
 ```
           Routing      Original      Derated      Resource
