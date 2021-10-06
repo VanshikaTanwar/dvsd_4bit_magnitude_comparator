@@ -328,6 +328,55 @@ met5                70             0            0.00%             0 /  0 /  0
 ---------------------------------------------------------------------------------------
 Total             2015            64            3.18%             0 /  0 /  0
 ```
+- Complete detail routing:
+```
+Total wire length = 459 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 193 um.
+Total wire length on LAYER met2 = 241 um.
+Total wire length on LAYER met3 = 25 um.
+Total wire length on LAYER met4 = 0 um.
+Total wire length on LAYER met5 = 0 um.
+Total number of vias = 150.
+Up-via summary (total 150):.
+
+----------------------
+ FR_MASTERSLICE      0
+            li1     74
+           met1     71
+           met2      5
+           met3      0
+           met4      0
+----------------------
+                   150
+		   
+```
+- Final Summary:
+
+```
+Run Directory: /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/reports/magic//32-magic.drc
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/results/lvs/dvsd_cmp.lvs_parsed.lef.log
+LVS reports no net, device, pin, or property mismatches.
+Total errors = 0
+----------------------------------------
+
+Antenna Summary:
+Source: /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/reports/routing//34-antenna.rpt
+Number of pins violated: 0
+Number of nets violated: 0
+[INFO]: check full report here: /openLANE_flow/designs/dvsd_cmp/runs/vanshika_4bit_magnitude_comparator/reports/final_summary_report.csv
+[INFO]: Saving Runtime Environment
+[SUCCESS]: Flow Completed Without Fatal Errors.
+
+```
 
 ##  Magic layout generate 
 
